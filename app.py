@@ -490,7 +490,7 @@ with left:
   </div>
 
   <div class="kepler-small">
-    Final Thesis
+    Final Thesis *
   </div>
 
   <div class="kepler-small">
@@ -500,9 +500,14 @@ with left:
   <div class="kepler-small">
     Kepler is a distillation attack simmulator, named after <b>Johannes Kepler</b> (1571–1630), whose breakthroughs were built on his “teacher” Tycho Brahe’s observations.
     Kepler shows how a student can learn from a teacher’s outputs — and in time, <i>eclipse</i> the teacher’s practical value by
-    reproducing its behavior with less cost. While not formally part of the final thesis paper, this simulator is built in the Keplerian 
-    spirit of letting careful observation speak — ideally loudly enough to perturb the grading orbit toward bonus points.
+    reproducing its behavior with less cost.
   </div>
+
+  <div class="kepler-small" style="margin-top:0.6rem;">
+  * While not formally part of the final thesis paper, this simulator is built in the Keplerian 
+  spirit of letting careful observation speak — ideally loudly enough to perturb the grading orbit toward <b>bonus points.</b>
+</div>
+
 </div>
         """,
         unsafe_allow_html=True,
