@@ -1,6 +1,6 @@
 # Kepler
 
-**Kepler** is a small Streamlit simulator that explains the basics of a knowledge distillation attack, also known as a model extraction attack.
+**Kepler** is a simulator that explains the basics of an adversarial model distillation attack.
 
 The live demo is here: [kepler-jkjcyz83egxzgm3em3yjh3.streamlit.app](https://kepler-jkjcyz83egxzgm3em3yjh3.streamlit.app/)
 
@@ -85,6 +85,7 @@ Then open the local Streamlit URL shown in your terminal.
 ```text
 .
 ├── app.py
+├── LICENSE
 ├── requirements.txt
 ├── assets/
 │   ├── kepler_laws_diagram.svg
@@ -93,6 +94,10 @@ Then open the local Streamlit URL shown in your terminal.
 └── README.md
 ```
 
-## Notes
+## License
 
-This repository intentionally excludes private paper drafts, thesis exports, and personal research documents. The README summarizes the project in plain language without requiring the original paper.
+This project is released under the MIT License.
+
+Copyright (c) 2026 Ziauddin Sherkar.
+
+Third-party libraries used by this project remain governed by their own licenses.

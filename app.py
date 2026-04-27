@@ -410,7 +410,7 @@ def train_student_from_distilled(distilled_rows, seed=42, soft_samples_per_row=6
     Hard-label rows:
       - one label per question
     """
-    rng = np.random.default_rng(int(time.time()))
+    rng = np.random.default_rng(seed)
 
     X_train = []
     y_train = []
@@ -437,6 +437,9 @@ def train_student_from_distilled(distilled_rows, seed=42, soft_samples_per_row=6
         else:
             X_train.append(q)
             y_train.append(r["teacher_hard_label"])
+
+    if len(set(y_train)) < 2:
+        raise ValueError("Collect teacher outputs from at least two categories before training the student.")
 
     vec = TfidfVectorizer(ngram_range=(1, 2), min_df=1)
     Xv = vec.fit_transform(X_train)
@@ -779,10 +782,14 @@ We train a small student model on the distilled dataset to replicate the teacher
         st.info("Collect a distilled dataset first (Pipeline tab).")
     else:
         if st.button("Train student on Distilled Dataset"):
-            svec, sclf = train_student_from_distilled(rows, seed=42, soft_samples_per_row=6)
-            st.session_state["student_vec"] = svec
-            st.session_state["student_clf"] = sclf
-            st.success("Student trained.")
+            try:
+                svec, sclf = train_student_from_distilled(rows, seed=42, soft_samples_per_row=6)
+            except ValueError as e:
+                st.warning(str(e))
+            else:
+                st.session_state["student_vec"] = svec
+                st.session_state["student_clf"] = sclf
+                st.success("Student trained.")
 
         if st.session_state["student_vec"] is not None:
             st.markdown("#### Quick Evaluation (Pedagogical)")
