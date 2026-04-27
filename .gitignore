@@ -19,3 +19,12 @@ Thumbs.db
 
 # Data / logs
 *.log
+
+# Local papers, drafts, and personal research exports
+assets/Final Thesis/
+Final Thesis/
+Thesis/
+*.docx
+*.pptx
+*.pdf
+~$*

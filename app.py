@@ -490,22 +490,18 @@ with left:
   </div>
 
   <div class="kepler-small">
-    Final Thesis *
-  </div>
-
-  <div class="kepler-small">
     Digital Counterintelligence, Fall 2025
   </div>
   <div class="kepler-rule"></div>
   <div class="kepler-small">
-    Kepler is a distillation attack simmulator, named after <b>Johannes Kepler</b> (1571–1630), whose breakthroughs were built on his “teacher” Tycho Brahe’s observations.
+    Kepler is a distillation attack simulator, named after <b>Johannes Kepler</b> (1571–1630), whose breakthroughs were built on his “teacher” Tycho Brahe’s observations.
     Kepler shows how a student can learn from a teacher’s outputs — and in time, <i>eclipse</i> the teacher’s practical value by
     reproducing its behavior with less cost.
   </div>
 
   <div class="kepler-small" style="margin-top:0.6rem;">
-  * While not formally part of the final thesis paper, this simulator is built in the Keplerian 
-  spirit of letting careful observation speak — ideally loudly enough to perturb the grading orbit toward <b>bonus points.</b>
+  This is an educational simulator. It uses a small local classifier and a toy historical question set to explain the mechanics of
+  model extraction without attacking any real system.
 </div>
 
 </div>
